@@ -9,6 +9,9 @@ const app = express()
 app.use(expressLayouts);
 app.set('view engine', 'ejs');
 
+// Express body parser
+app.use(express.urlencoded({ extended: true }));
+
 // Express session
 app.use(
   session({
